@@ -1,0 +1,14 @@
+#!/bin/bash
+pacman -S git rsync mlocate bash-completion wireless_tools reflector wpa_supplicant dialog --noconfirm
+updatedb
+chmod +x /pre_arch/base
+mv /pre_arch/bash_root /root/.bashrc
+chmod +x /pre_arch/locale_us
+chmod +x /pre_arch/mirrors
+chmod +x /pre_arch/up-grub
+mv /pre_arch/mirrors /usr/bin/
+mv /pre_arch/up-grub /usr/bin/
+mv /pre_arch/.bashrc /home/madaramost/
+chown madaramost /home/madaramost/.bashrc
+touch /etc/vconsole.conf
+echo FONT=iso02-12x22 > /etc/vconsole.conf

@@ -1,0 +1,1 @@
+useradd -m -g users -G adm,wheel,storage,games,sys,audio,video -s /bin/bash madaramost
